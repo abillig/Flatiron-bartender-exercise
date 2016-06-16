@@ -1,19 +1,19 @@
 class DrinkBuyer
 
-  attr_accessor :customer, :order
+  attr_accessor :customer, :drink
 
   #alter customer's drinks array
   #return updated customer's drinks array
 
-def initialize(customer, order)
+def initialize(customer, drink)
   @customer = customer
-  @order = order
-  @customer.orders << @order
+  @drink = drink
+  @customer.orders << @drink
 end
 
 
 def run 
-  @customer.total += @order.price
+  @customer.total += @drink.price
 end
 
 end

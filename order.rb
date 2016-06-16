@@ -1,19 +1,13 @@
 class Order
-  attr_accessor :name, :price, :menu, :orders
+  attr_accessor :name, :price, :orders
 
 @@orders = []
-@@menu = {}
 #hash? 
 
-def initialize(name, price)
+def initialize(name, drink)
   @name = name
-  @price = price
+  @price = @drink.price
   @@orders<<self
-  @@menu[@name] = @price
-end
-
-def self.menu
-  @@menu
 end
 
 def self.orders
